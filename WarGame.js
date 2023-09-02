@@ -18,7 +18,7 @@ class Deck {                                            //This defines the deck 
         console.log('Creating new Deck');
         for (let i = 0; i < this.suits.length; i++) {
             for (let n = 0; n < this.names.length; n++) {                                   //This loop runs through the suits, names, and values of the cards. 
-                this.cards.push(new Card(this.suits[i], this.names[n], this.values[n]));    //It also pushed the card objects to the empty cards array
+                this.cards.push(new Card(this.suits[i], this.names[n], this.values[n]));    //It also pushes the card objects to the empty cards array
             }
         }
     }
@@ -78,7 +78,7 @@ class Game {
         let player2 = this.players[1];
         let roundWinner = '';
         let turn = 0;
-        //This runs until a player runs out of cards. Each time it will pop the last card out of the array and compares them. This will determine the winner 
+        //This runs until a player runs out of cards. It pops the last card out of the array and compares them and this will determine the round winner 
         while (player1.hands.length !== 0 && player2.hands.length !== 0) {
             let player1Card = player1.hands.pop();
             let player2Card = player2.hands.pop();
